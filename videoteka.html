@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Видеовизитка</title>
+
+<style type="text/css">
+
+*{margin: 0; padding: 0; }
+
+html,body{
+	overflow: hidden;
+}
+
+	header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 8vh;
+	width: 100vw;
+	background-color: #323232;
+
+
+}
+
+#nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 70vw;
+	height: 6vh;
+	background-color: #2d2d2d;
+}
+
+.nav_element{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15.5vw;
+	height: 8vh;
+}
+
+.nav_element a{
+	text-decoration: none;
+	color: 	#3cadff;
+	opacity: 0.7;
+	font-size: 1.3vw;
+}
+
+.nav_element a:hover{
+	text-decoration: none;
+	color: #3cadff;
+	opacity: 1;
+}
+
+#videocontainer{
+	width: 100vw;
+	height: 92vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+video{
+width: 1000px;
+height: 562.5px;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+	<header>
+		<div id="nav">
+			<div class="nav_element" ><a href="authobiography.html" id="nav_element_1">Автобиография</a></div>
+			<div class="nav_element" ><a href="recensia.html" id="nav_element_2">Рецензия</a></div>
+			<div class="nav_element" ><a href="gallery.html" id="nav_element_3">Галерея</a></div>
+			<div class="nav_element" ><a href="videoteka.html" id="nav_element_4">Видеовизитка</a></div>
+			<div class="nav_element" ><a href="documents.html" id="nav_element_6">Документы</a></div>
+			
+		</div>	
+	</header>	
+<div id="videocontainer">
+	<video  controls="controls" autoplay="autoplay" poster="poster.png">
+   		<source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+	</video>	
+</div>
+
+<script type="text/javascript">
+		document.getElementById('nav_element_4').style.opacity	 = 1;
+</script>
+
+
+	
+</body>
+</html>

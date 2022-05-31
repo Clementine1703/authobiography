@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Документы</title>
+
+</head>
+<style>
+*{margin: 0; padding: 0; }
+
+html,body{
+	overflow: hidden;
+}
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 8vh;
+	width: 100vw;
+	background-color: #323232;
+
+
+}
+
+#nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 70vw;
+	height: 6vh;
+	background-color: #2d2d2d;
+}
+
+.nav_element{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15.5vw;
+	height: 8vh;
+}
+
+.nav_element a{
+	text-decoration: none;
+	color: 	#3cadff;
+	opacity: 0.7;
+	font-size: 1.3vw;
+}
+
+.nav_element a:hover{
+	text-decoration: none;
+	color: #3cadff;
+	opacity: 1;
+}
+
+.gallery_list_container{
+	width: 100vw;
+	height: 92vh;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery_list{
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+	align-items: center;
+	width: auto;
+	height: 80vh;
+
+}
+
+
+
+#portret{
+	
+}
+
+#peyzazh{
+	
+}
+
+#arhitektura{
+	
+}
+
+#qwe{
+
+}
+
+.gallery_element{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25vw;
+	height: 35vh;
+	background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+	margin-left: 3vw;
+	border-radius: 3px;
+	font-weight: 600;
+	color: black;
+	opacity: 0.7;
+	text-align: center;
+	border: 2px black solid;
+
+}
+
+.gallery_element:hover{
+	border: 3px solid #3cadff;
+	opacity: 1;
+	color: #3cadff;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+
+
+</style>
+
+
+
+<body>
+
+	<header>
+		<div id="nav">
+			<div class="nav_element" ><a href="authobiography.html" id="nav_element_1">Автобиография</a></div>
+			<div class="nav_element" ><a href="recensia.html" id="nav_element_2">Рецензия</a></div>
+			<div class="nav_element" ><a href="gallery.html" id="nav_element_3">Галерея</a></div>
+			<div class="nav_element" ><a href="videoteka.html" id="nav_element_4">Видеовизитка</a></div>
+			<div class="nav_element" ><a href="documents.html" id="nav_element_6">Документы</a></div>
+			
+		</div>	
+	</header>			
+
+	<div class="gallery_list_container">
+		<div class="gallery_list">
+			<a href="gallery_el/por.html"><div class="gallery_element" id="portret"><h1>Паспорт</h1></div></a>
+			<a href="gallery_el/pey.html"><div class="gallery_element" id="peyzazh"><h1>Снилс<h1></div></a>
+			<a href="gallery_el/arch.html"><div class="gallery_element" id="arhitektura"><h1>Аттестат<h1></div></a>
+		</div>
+	</div>
+
+	
+
+
+
+
+<script type="text/javascript">
+	document.getElementById('nav_element_6').style.opacity	 = 1;
+</script>
+
+
+
+
+</script>
+	
+</body>
+</html>

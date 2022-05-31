@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Автобиография</title>
+
+</head>
+<style>
+*{margin: 0; padding: 0; }
+
+html,body{
+	overflow: hidden;
+	font-family: Proxima Nova;
+}
+
+input[type=range]
+{
+	opacity: 0;
+	position: relative;
+appearance:none;
+margin-bottom: 15vh;
+margin-left: 8.7vw;
+z-index: 2;
+transform: translateY(-1vh);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+height: 40px;
+border: 1px solid #666;
+background-color: #ccc;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	opacity: 	0;
+width: 10px;
+height: 10px;
+cursor: pointer;
+	z-index: 	100;
+		position: 	relative;
+}
+
+input[type=range]::-moz-range-track
+{
+height: 40px;
+border: 1px solid #666;
+background-color: #ccc;
+
+}
+ 
+input[type=range]::-moz-range-thumb
+{
+	opacity: 	0;
+width: 10px;
+height: 10px;
+cursor: pointer;
+	z-index: 	100;
+		position: 	relative;
+}
+
+input[type="range"]::-ms-track {
+height: 40px;
+border: 1px solid #666;
+background-color: #ccc;
+}
+ 
+input[type="range"]::-ms-thumb
+{
+	opacity: 	0;
+width: 10px;
+height: 10px;
+cursor: pointer;
+	z-index: 	100;
+		position: 	relative;
+
+}
+
+
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 8vh;
+	width: 100vw;
+	background-color: #323232;
+
+
+}
+
+#nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 70vw;
+	height: 6vh;
+	background-color: #2d2d2d;
+}
+
+.nav_element{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15.5vw;
+	height: 8vh;
+}
+
+.nav_element a{
+	text-decoration: none;
+	color: 	#3cadff;
+	opacity: 0.7;
+	font-size: 1.3vw;
+}
+
+.nav_element a:hover{
+	text-decoration: none;
+	color: #3cadff;
+	opacity: 1;
+}
+
+
+#line{
+	position: absolute;	
+	width: 2vw;
+	height: 4vh;
+	background-color: pink;
+	overflow:hidden;
+	z-index: 6;
+	transition-duration: 1s;
+	transition-timing-function:ease-out;
+	align-items: center;
+
+}
+
+#line > p{font-size: 1.3vw}
+
+input[type=checkbox]:hover ~ #line{
+	background-color: red;
+}
+
+input[type=checkbox]{
+	position: absolute;
+	width: 2vw;
+	height: 4vh;;
+	z-index: 8;
+	opacity: 0;
+
+}
+
+input[type=checkbox]:checked ~ #line{
+	background-color: yellow;
+	left: 0;
+	width: 15vw;
+	height: 65vh;
+}
+
+input[type=checkbox]:checked{
+	left: 0;
+	width: 15vw;
+	height: 65vh;
+}
+
+
+
+
+#workspace{
+	display: flex;
+	flex-direction: row;
+	height: 60vh;
+	width: 366.66vw;
+	color: black;
+
+}
+
+#workspace img{
+	position: absolute;
+	z-index: 1;
+	width: 366.66vw;
+	height: 60vh;
+}
+
+.window{
+	min-height: 60vh;
+	max-height: auto;
+	width: 33.33vw;
+	transition-duration: 1s;
+	border-right: 2px solid black;
+	font-family: courier new;
+	z-index: 3;
+	opacity: 0.5;
+
+	
+}
+
+.window p{
+	margin: 2vh 2.7vw auto 2.7vw;
+	font-size: 1.3vw;
+	opacity: 1;
+	font-weight: 600;
+	text-align: center;
+
+}
+
+.window h1{
+	text-align: center;
+}
+
+
+.rrr{
+	background-color:white;
+}
+
+.ttt{
+	background-color:white;
+}
+
+#window_1{
+	background-color:white;
+}
+
+#window_2{
+	background-color:white;
+}
+
+#window_3{
+	background-color:white;
+}
+
+#window_3 p{
+	margin-top: 6vh;
+}
+
+#window_4{
+	background-color:white;
+}
+
+.windowP p{
+	
+}
+#window_4 p{
+	margin: 2vw 2vw auto 2vw;
+}
+
+#window_5{
+		background-color:white;
+}
+
+#window_6{
+		background-color:white;
+}
+
+#window_7{
+		background-color:white;
+}
+
+#window_8{
+		background-color:white;
+}
+
+#window_9{
+			background-color:white;
+}
+
+#window_10{
+		background-color:white;
+}
+
+#window_11{
+		background-color:white;
+}
+
+
+
+
+
+
+#workspace1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 32vh;
+	background-color: #323232;
+	width: 100vw;
+	background-image: url('POd_fot_got.png');
+	background-size: cover;
+
+}
+
+
+#slider{
+	position: relative;
+
+}
+
+
+
+#polzunok{
+	background-color: white;
+	border-radius: 5px;
+	width: 77vw;
+	height: auto;
+	background-color: none;
+	border-radius: 5px;
+	opacity: 0;
+	z-index: 2;
+	cursor: 	pointer;	
+
+}
+
+#adobe_thumb{
+}
+
+#adobe_thumb img{	
+	position: absolute;
+	animation: lila 1s linear infinite;
+
+
+}
+
+#adobe{
+	position: absolute;
+	width: 	2vw;
+	height: 60vh;
+	transform: translateY(-2.5vh);
+	z-index:1; 
+	margin-left: 9.1vw;
+}
+
+#arrow_thumb_container{
+	position: absolute;
+	width: 10vw;
+	height: 3vh;
+	color: red;
+	background-color: white;
+	border-radius: 6px;
+	transform: translate(4.76vw,-7vh);
+	font-size:1.2vw;
+	font-weight: 600;
+	z-index: 200;
+	animation: lilo 1s linear infinite;
+}
+
+#arrow_thumb {
+	margin-top: 1vh;
+	margin-left: 3vw;
+	transform: rotate(90deg);
+	transform: translateX(-4.1vw);
+	float: right;
+
+}
+
+#arrow_thumb p{
+
+}
+
+
+
+@keyframes lilo{
+	0%{color: red; background-color: white;}
+	50%{color: white; background-color: red;}
+	100%{color: red; background-color: white;}
+}
+
+@keyframes lila{
+	0%{opacity: 1;}
+	50%{opacity: 0.5;}
+	100%{opacity: 1;}
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+<body>
+
+	<header>
+		<div id="nav">
+			<div class="nav_element" ><a href="authobiography.html" id="nav_element_1">Автобиография</a></div>
+			<div class="nav_element" ><a href="recensia.html" id="nav_element_2">Рецензия</a></div>
+			<div class="nav_element" ><a href="gallery.html" id="nav_element_3">Галерея</a></div>
+			<div class="nav_element" ><a href="videoteka.html" id="nav_element_4">Видеовизитка</a></div>
+			<div class="nav_element" ><a href="documents.html" id="nav_element_6">Документы</a></div>
+			
+		</div>	
+	</header>	
+
+
+	<div id="workspace">
+			<img src="панорама.gif">
+
+		<div id="window_1" class="window">
+			<h1>ПРОЛОГ</h1> <hr>
+			<p>Казалось бы , что тут такого , взять и расписать свою собственную жизнь, показать какие-то знаковые для меня события , эпизоды, но в процессе написания понимаешь , что это действительно сложно. А так как это обязательное условие , я попробую упростить себе задачу , написав автобиографию от 3-го лица. Ибо писать о своих достижениях ,то, что я такой ,другой , разный, как-то неловко. Поэтому всё ниженаписанное будет прочитано вами со стороны . Да и такой метод изложения поднимает уровень доверия по отношению к написанному.  </p>
+		</div>
+		<div id="window_2" class="window">
+			<h1>Глава 1     -     ДЕТСТВО</h1> <hr>
+			<p>Отсчет биографии начинается 22 сентября 2002г. ,именно тогда родился человек ещё даже не подозревавший , что он в будущем захочет стать режиссером. Тем более, что этому способствовала творческая деятельность родителей . Его отец – Усмиханов Бахтияр Набиевич – работал оператором на городском телевидении , снимая самые интересные события , происходящие в их небольшом городке. Мама – Усмиханова Зарина Алискеровна -работала на том же телевидении диктором , писала сценарии к передачам , которые сама и вела.  </p>
+		</div>
+		<div id="window_3" class="window windowP">
+			
+			<p>Любовь отца передалась сыну , и он в будущем продолжит начатое им дело. Будущий режиссер пошел в ясли-сад , когда ему исполнился год. Единственный случай , который он запомнил , - это эпизод с ключами отца , когда Руслан забрал их из машины и всем хвастал,  что он счастливый их обладатель . А в это время отец , судорожно переворачивая все вверх тормашками в доме, искал их и не мог найти. В отчаянии он пошёл пешком , и когда увидел Руслана , сидевшего с охранником,  то сын радостно объявил, что у него есть ключи .
+</p>
+		</div>
+		<div id="window_4" class="window windowP">
+			<p>В этом возрасте герой автобиографии часто приходил на работу родителей,  на то самое телевидение , где и зародилась впоследствии его любовь к съемке и видеоремеслу. </p> <br>  <hr>
+			<h1>Глава 2     -     ШКОЛА</h1> <hr>
+			<p>В трепетном ожидании поступления в школу, испытывая белую зависть к друзьям и соседям, которые уже пошли в первый класс, Руслан настойчиво просил родителей отправить его в школу, несмотря на то, что ему было ещё всего 5 лет, они записали его, и вот 1 сентября 2008г,  </p>
+
+
+		</div>
+		<div id="window_5" class="window">
+			<p>мечта героя нашей автобиографии сбылась. Он очень полюбил учительницу, свой новый класс, и все это способствовало тому, что он учился на одни пятерки. Руслан принимал участие в школьных и муниципальных олимпиадах и занимал призовые места, что говорит о его прекрасной подготовке. Постоянным атрибутом , присутствующим в доме , была видеокамера , с помощью которой Руслан снимал все , происходящие в семье , и таким образом запечатлел важные события , с которыми связанно самое дорогое для всей семьи. Постепенно наш герой приобщался к видеосъемке и все больше хотел снимать и снимать.  </p>
+		</div>
+		<div id="window_6" class="window windowP">
+			<br><br>
+			<p>&nbsp;&nbsp; В 5-м классе Руслан перешел по некоторым обстоятельствам в другую школу.  Его коммуникабельность позволила легко и очень быстро адаптироваться в новом коллективе,  где его полюбили и приняли за своего , чему и удивлялись учителя. Учился он также хорошо , как и в начальной школе . Проявляя интерес к искусству, он записался на хореографию , учился несколько лет и теперь неплохо танцует как национальные, так и современные танцы .  </p>
+		</div>
+		<div id="window_7" class="window windowP">
+			<h1>Глава 3 - ТЕЛЕВИДЕНИЕ</h1> <hr><hr>
+			<p>	Лето 2016г. Закончилась школьная пора . Отец , видя стремление сына к видеосъемке,  предложил ему попробовать себя в роли оператора на городском телевидении. Руслан с огромной радостью согласился , поскольку это дело ему очень нравится.  Эмоциям не было предела. Первого июня, в День защиты детей , один из операторов , собираясь на съемку концерта , посвященного этому празднику , взял его собой , так как видел огромное желание , и тот с удовольствием согласился. Первый съемочный день прошел с успехом</p>
+		</div>
+
+		<div id="window_8" class="window">
+			<p>и стал знаковым для дальнейшей профессиональной деятельности  Руслана. Он понял , что это именно то , чем хочет заниматься и развиваться в этой области в дальнейшем, и оставить хотя бы маленький , но неизгладимый след в истории визуального искусства. И с тех пор начался новый этап в жизни нашего героя. Его неоднократно отправляли снимать репортажи с мест событий , он был и режиссером , и сценаристом,  и оператором , в одном лице. Помимо этого расширял диапзон знаний в области кино , телевидения и литературы , параллельно изучая программную инженерию , технические  аспекты своей профессии.  </p>
+		</div>
+
+		<div id="window_9" class="window">
+			<p>Эти каникулы были самые увлекательные в его жизни , так как он осознал , кем он хочет стать в будущем и что для этого необходимо.  С этого момента и началась творческая карьера . Любовь к видеосъемке и интузиазм привели к тому , что он стал основателем и главным оператором школьного телевидения . В этой роли Руслан принимал постоянное участие в школьных , муниципальных,  региональных и даже всероссийских конкурсах . Помимо кинематографа героя влекла к себе давняя мечта : играть на гитаре.  И вот мечта начала осуществляться в 10-м классе.  </p>
+		</div>
+
+		<div id="window_10" class="window">
+			<p><br>Но , поскольку изучение факультета гитары длиться 5 лет , то он решил обучаться экстернатом и приложил к этому массу усилий , и теперь он неплохо играет на гитаре и поёт. <br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;Зимой 2020 Руслан пошел на курсы Режиссёра мультимедиа во ВГИК, где ещё больше убедился в том, что хочет связать свою жизнь с этой профессией.   </p>
+		</div>
+
+		<div id="window_11" class="window">
+			<h1>ЭПИЛОГ</h1> <hr>
+			<br><br>
+			<p>Все эпизоды в совокупе и по отдельности позволяют увидеть , что стать режиссером ему было предназначенно свыше. И если все , что вы читали до сих пор было написано с юмористическим уклоном , то желание героя рассказа стать режиссером – это не из области юмора , а вполне серьёзная цель , к которой он стремится всю жизнь.  </p>
+		</div>
+
+	</div>
+
+
+	<div id="workspace1">
+		<div id="slider">
+			<div id="arrow_thumb_container">
+				<p style="text-align: center">Двигай это!</p>
+				<div id="arrow_thumb"><p>&#9660;</p></div>
+			</div>
+			<div id="adobe_thumb"><img src="playheadhighquality.png" height="100px" width='10px' id="adobe"></div>
+			
+			<input type="range" id="polzunok" min="0" max='420' value="0" step="1" oninput="DODA">
+		</div>
+	</div>
+
+
+
+
+<script type="text/javascript">
+	
+	var box0 = document.getElementById("workspace");
+	
+
+	document.getElementById("polzunok").oninput = function(){
+		range00 = document.getElementById("polzunok").value;
+		if (range00 != range000){
+			val = ((range000 * 0.1904) + (0.1904 * (range00 - range000)));
+			document.getElementById("adobe_thumb").style.marginLeft = val + "vw";
+			range000 = range0;
+		}
+	}
+
+	var range0 = document.getElementById("polzunok").value;
+	var box = document.getElementById("workspace");
+	var val;
+	var range;
+	var val0;
+
+	document.getElementById("polzunok").oninput = function(){
+		range = document.getElementById("polzunok").value;
+		if (range != range0){
+			val = -((range0 * 0.6349) + (0.6349 * (range - range0)));
+			val0 = ((range0 * 0.183) + (0.183 * (range - range0)));
+			document.getElementById("workspace").style.transform = "translateX(" + val + "vw)";
+			document.getElementById("adobe_thumb").style.marginLeft = val0 + "vw";
+			range0 = range;
+		}
+	}
+</script>
+
+
+
+
+<script type="text/javascript">
+	document.getElementById('nav_element_1').style.opacity	 = 1;
+	document.getElementById("polzunok").onclick = function(){document.getElementById("arrow_thumb_container").style.display = 'none';}
+</script>
+
+
+
+
+	
+</body>
+</html>
